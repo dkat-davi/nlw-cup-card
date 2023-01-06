@@ -1,0 +1,95 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Sriracha&display=swap'); 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body * {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(151deg, #0F2B05, #000000);
+}
+
+header {
+    padding: 75px 0px;
+}
+
+.card {
+    color: white;
+    text-align: center;
+    width: 200px;
+    height: 317px;
+    background-image: url(../assets/bg-explorer.svg);
+    background-size: contain;
+    box-shadow: 0px 0px 10px black;
+    cursor: pointer;
+    
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: appear .8s forwards;
+}
+
+.card img {    
+    width: 120px;
+    border-radius: 50%;
+    border: 3px solid #F7DD43;
+    object-fit: cover;
+    margin-top: 80px;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.info {
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 60px;
+}
+
+.info h1 {
+    font-size: 1em;
+}
+
+.info p {
+    font-size: 0.8em;
+    line-height: 160%;
+}
+
+
+@media screen and (min-width: 768px) {
+    header {
+        padding: 60px 0px;
+    }
+
+    .card {
+        width: 264px;
+        height: 419px;
+        
+    }
+
+    .card img {
+        margin-top: 103px;
+        width: 150px;
+    }
+
+    .info {
+        margin-top: 100px;
+    }
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
